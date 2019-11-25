@@ -2,8 +2,7 @@
   tasks:
 
       - block:
-          - name: Check for missing updates.
-            win_updates: state=searched
-            register: update_count
-          - name: List missing updates
-            debug: var=update_count
+          - name: Install missing updates.
+            win_updates: category_names=['CriticalUpdates', 'SecurityUpdates', 'UpdateRollups']
+            reboot: yes
+

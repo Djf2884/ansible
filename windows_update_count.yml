@@ -1,6 +1,10 @@
 ---
-- hosts: all
-  – name: Check for missing updates
-          win_updates: 
-            state: searched
+– hosts: all
+
+  tasks:
+ 
+   # Check if there are missing updates
+    – block:
+        – name: Check for missing updates.
+          win_updates: state=searched
           register: update_count

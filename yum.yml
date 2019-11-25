@@ -18,7 +18,3 @@
     sudo: true
     ignore_errors: true
     when: reboot_hint.stdout.find("reboot") != -1
-    
-  - name: Wait for server to reboot.
-    pause: seconds=60
-    when: rebooting|changed

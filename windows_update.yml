@@ -1,10 +1,6 @@
 ---
 - hosts: all
   tasks:
-- name: Install all security, critical, and rollup updates.
-  win_updates:
-    category_names:
-      - SecurityUpdates
-      - CriticalUpdates
-      - UpdateRollups
-    reboot: yes
+ – name: Check for missing updates
+          win_updates: state=searched
+          register: update_count

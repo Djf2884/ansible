@@ -1,5 +1,3 @@
-# windows-updates.yml
-
 - hosts: all
   tasks:
 

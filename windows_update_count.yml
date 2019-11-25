@@ -1,8 +1,6 @@
 # windows-updates.yml
 
-- hosts: windows
-  serial: 1
-  remote_user: user@DOMAIN.COM
+- hosts: all
 
   tasks:
 

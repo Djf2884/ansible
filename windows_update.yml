@@ -1,8 +1,9 @@
+---
 - hosts: all
   tasks:
-
-      - block:
-          - name: Install missing updates.
-            win_updates: category_names=['CriticalUpdates', 'SecurityUpdates', 'UpdateRollups']
-            reboot: yes
-
+  - name: Choose which Windows updates to install
+  win_updates:
+    category_names:
+      - SecurityUpdates
+      - CriticalUpdates
+      - UpdateRollups

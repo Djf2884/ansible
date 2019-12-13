@@ -3,4 +3,18 @@
 
       - block:
           - name: Install Windows updates.
-            win_updates: reboot=yes
+            win_updates: 
+              category_names:
+              - Application
+              - Connectors
+              - CriticalUpdates
+              - DefinitionUpdates
+              - DeveloperKits
+              - FeaturePacks
+              - Guidance
+              - SecurityUpdates
+              - ServicePacks
+              - Tools
+              - UpdateRollups
+              - Updates    
+              reboot: yes

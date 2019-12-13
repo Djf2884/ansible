@@ -1,7 +1,6 @@
 - hosts: all
   tasks:
 
-      - block:
           - name: Install Windows updates.
             win_updates: 
               category_names:

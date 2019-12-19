@@ -1,9 +1,0 @@
-- hosts: all
-  tasks:
-
-      - block:
-          - name: Check for missing updates.
-            win_updates: state=installed
-            register: update_installed
-          - name: List missing updates
-            debug: var=update_installed
